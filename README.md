@@ -1,8 +1,5 @@
 # Java-debugging
-Debugging Exercise 1: Array Manipulation
-
-Objective: To identify and fix errors in a Java program that manipulates arrays.
-
+# Debugging Exercise 1: Array Manipulation
 public class ArrayManipulation {
     public static void main(String[] args) {
         int[] numbers = {1, 2, 3, 4, 5};
@@ -11,14 +8,9 @@ public class ArrayManipulation {
             System.out.println(numbers[i]);
         }
     }
-}
-
-Error:
-Array index out of bounds
-
-Explanation:
-The looping statement in the preceding task code is the problem, Java arrays are zero-indexed, meaning the first element is at index 0, and iteration continues until the last element numbers.length-1.
-If we modify the looping condition by eliminating the "=" symbol, the issue with this code is resolved.Code without error:
+} 
+# Explanation:
+# The looping statement in the preceding task code is the problem, Java arrays are zero-indexed, meaning the first element is at index 0, and iteration continues until the last element numbers.length-1. If we modify the looping condition by eliminating the "=" symbol, the issue with this code is resolved.Code without error:
 public class ArrayManipulation {
     public static void main(String[] args) {
         int[] numbers = {1, 2, 3, 4, 5};
@@ -28,11 +20,7 @@ public class ArrayManipulation {
         }
     }
 }
-
-Debugging Exercise 2: Object-Oriented Programming
-
-Objective: To identify and fix errors in a Java program that demonstrates basic object-oriented programming principles.
-
+# Debugging Exercise 2: Object-Oriented Programming
 class Car {
     private String make;
     private String model;
@@ -54,11 +42,10 @@ public class Main {
         car.stop();
     }
 }
-Error:
-The method stop() is undefined for the type Car
-Explanation:
-As we can see in the Main class we are trying to call the stop() method on car object, but the stop() method is not defined in the Car class, so to resolve this we can add a stop method to the Car class.
-Code without error:
+# Error:
+# The method stop() is undefined for the type Car
+# Explanation:
+# As we can see in the Main class we are trying to call the stop() method on car object, but the stop() method is not defined in the Car class, so to resolve this we can add a stop method to the Car class. Code without error:
 class Car {
     private String make;
     private String model;
@@ -82,11 +69,10 @@ public class Main {
         car.stop();
     }
 }
-Output:
-Starting the car.
-Stopping the car.
-Debugging Exercise 3: Exception Handling
-Objective: To identify and fix errors in a Java program that demonstrates exception handling.
+# Output:
+# Starting the car.
+# Stopping the car.
+# Debugging Exercise 3: Exception Handling
 public class ExceptionHandling {
     public static void main(String[] args) {
         int[] numbers = {1, 2, 3, 4, 5};
@@ -105,16 +91,8 @@ public class ExceptionHandling {
         return a / b;
     }
 }
-
-Error:
-1.	Array index out of bounds
-2.	Arithmetic Exception
-
-Explanation:
-The first error message in this code is Array index out of bounds, as we can see.while we run the program, the try and catch block is utilized to handle the exception and array index out of bounds is printed because the code attempts to access the 10th element of the numbers array while it is outside its bounds.
-The second error message in this code is an ArithmeticException, its not effective to divide by zero in Java so a try-catch block can be added to the main method and since zero is not allowed we can add a condition to the divide method that if b==0 before performing division and we can throw an ArithmeticException printing divison by zero is not allowed.
- 
-Code without error:
+# Error: 1.Array index out of bounds 2.Arithmetic Exception
+# Explanation: The first error message in this code is Array index out of bounds, as we can see.while we run the program, the try and catch block is utilized to handle the exception and array index out of bounds is printed because the code attempts to access the 10th element of the numbers array while it is outside its bounds. The second error message in this code is an ArithmeticException, its not effective to divide by zero in Java so a try-catch block can be added to the main method and since zero is not allowed we can add a condition to the divide method that if b==0 before performing division and we can throw an ArithmeticException printing divison by zero is not allowed. Code without error:
 public class ExceptionHandling {
     public static void main(String[] args) {
         int[] numbers = {1, 2, 3, 4, 5};
@@ -139,11 +117,10 @@ public class ExceptionHandling {
         }
     }
 }
-Output:
-Array index out of bounds.
-Division by zero is not allowed.
-
-Debugging Exercise 4:
+# Output:
+# Array index out of bounds.
+# Division by zero is not allowed.
+# Debugging Exercise 4:
 public class Fibonacci {
     public static int fibonacci(int n) {
         if (n <= 1)
@@ -158,10 +135,7 @@ public class Fibonacci {
         System.out.println("The Fibonacci number at position " + n + " is: " + result);
     }
 }
-
-Explanation: This code has logical error. The problem in the given code is that it does not correctly handle the base cases for the Fibonacci sequence. In the current implementation, when n is less than or equal to 1,it returns n. However, this is incorrect because the Fibonacci sequence starts with 0 and 1, not 1 and 1.
-
-Code without error:
+# Explanation: This code has logical error. The problem in the given code is that it does not correctly handle the base cases for the Fibonacci sequence. In the current implementation, when n is less than or equal to 1,it returns n. However, this is incorrect because the Fibonacci sequence starts with 0 and 1, not 1 and 1. Code without error:
 public class Fibonacci {
     public static int fibonacci(int n) {
         if (n==0)
@@ -178,10 +152,9 @@ public class Fibonacci {
         System.out.println("The Fibonacci number at position " + n + " is: " + result);
     }
 }
-Output:
-The Fibonacci number at position 6 is: 8
-
-Debugging Exercise 5:
+# Output:
+# The Fibonacci number at position 6 is: 8
+# Debugging Exercise 5:
 import java.util.*;
 public class PrimeNumbers {
     public static List<Integer> findPrimes(int n) {
@@ -207,11 +180,8 @@ public class PrimeNumbers {
         System.out.println("Prime numbers up to " + n + ": " + primeNumbers);
     }
 }
-
-Explanation: The issue in the provided code is with the condition used to check for prime numbers. The code incorrectly marks all numbers greater than 1 as prime because the isPrime variable is set to true initially and only set to false if a divisor is found.To fix this ,you should modify the inner loop to check for divisor more accurately. Adding on to that, this code can be made more efficient my changing the inner loop condition from j<i to j<i/2.
-Efficient Code:
+# Explanation: The issue in the provided code is with the condition used to check for prime numbers. The code incorrectly marks all numbers greater than 1 as prime because the isPrime variable is set to true initially and only set to false if a divisor is found.To fix this ,you should modify the inner loop to check for divisor more accurately. Adding on to that, this code can be made more efficient my changing the inner loop condition from j<i to j<i/2. Efficient Code:
 import java.util.*;
-
 public class PrimeNumbers {
     public static List<Integer> findPrimes(int n) {
         List<Integer> primes = new ArrayList<>();
@@ -236,5 +206,7 @@ public class PrimeNumbers {
         System.out.println("Prime numbers up to " + n + ": " + primeNumbers);
     }
 }
+# Output:
+# Prime numners up to 20: [2,3,5,7,11,13,17,19]
 Output:
 Prime numbers up to 20: [2, 3, 4, 5, 7, 11, 13, 17, 19]
