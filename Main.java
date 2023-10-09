@@ -1,5 +1,3 @@
-package vignesh;
-
 class Car {
     public void start() {
         System.out.println("Starting the car.");
